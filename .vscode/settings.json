@@ -2,5 +2,6 @@
     "cSpell.words": [
         "posthog",
         "uploadthing"
-    ]
+    ],
+    "typescript.tsdk": "node_modules\\typescript\\lib"
 }
