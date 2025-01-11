@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const TopNav = () => {
   return (
-    <nav className="flex items-center justify-between gap-4 px-4 py-4">
+    <nav className="flex items-center justify-between gap-4 px-4 py-4 bg-white text-black">
       <div className="flex items-center gap-4">
         <Link href="/" className="text-xl font-bold">
           Fixe
@@ -28,7 +28,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>
+      <body className="min-h-screen bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
         <TopNav />
         {children}
       </body>
