@@ -4,12 +4,12 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 
 ## TODO
 
-- [ ] Make it deploy
+- [x] Make it deploy
 - [ ] Scaffold basic ui with mock data
-- [ ] Setup database
+- [ ] Setup database (Vercel Postgres)
 - [ ] Attack database to UI
-- [ ] Add a basic auth
-- [ ] Add image upload
+- [ ] Add a basic auth (Clerk)
+- [ ] Add image upload (uploadthing.com)
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (w/ Server Actions)
 - [ ] Analytics (posthog)
