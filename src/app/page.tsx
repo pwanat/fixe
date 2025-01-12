@@ -1,12 +1,28 @@
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { db } from "~/server/db";
 
 export const dynamic = "force-dynamic";
 
-export default async function HomePage() {
+const Images = async () => {
   const images = await db.query.images.findMany({
     orderBy: (model, { desc }) => desc(model.createdAt),
   });
 
+  return (
+    <div className="flex flex-wrap items-center justify-center gap-12 px-4">
+      {images.map((image) => (
+        <div
+          key={image.id}
+          className="flex flex-col items-center justify-center gap-4 rounded-lg bg-white/10 p-8 shadow-xl"
+        >
+          <img src={image.url} className="h-48 rounded-lg" />
+          <div>{image.name}</div>
+        </div>
+      ))}
+    </div>
+  );
+};
+export default async function HomePage() {
   return (
     <main className="flex flex-col items-center justify-center">
       <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
@@ -15,18 +31,13 @@ export default async function HomePage() {
         </h1>
       </div>
       <div className="container flex flex-wrap items-center justify-center gap-12 px-4 py-16">
-        <h2 className="text-2xl font-bold">Images</h2>
-        <div className="flex flex-wrap items-center justify-center gap-12 px-4">
-          {images.map((image) => (
-            <div
-              key={image.id}
-              className="flex flex-col items-center justify-center gap-4 rounded-lg bg-white/10 p-8 shadow-xl"
-            >
-              <img src={image.url} className="h-48 rounded-lg" />
-              <div>{image.name}</div>
-            </div>
-          ))}
-        </div>
+        <SignedOut>
+          <h2 className="text-2xl font-bold">Please sign in above</h2>
+        </SignedOut>
+        <SignedIn>
+          <h2 className="text-2xl font-bold">Images</h2>
+          <Images />
+        </SignedIn>
       </div>
     </main>
   );
