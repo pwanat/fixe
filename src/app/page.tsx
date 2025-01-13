@@ -35,8 +35,10 @@ export default async function HomePage() {
           <h2 className="text-2xl font-bold">Please sign in above</h2>
         </SignedOut>
         <SignedIn>
-          <h2 className="text-2xl font-bold">Images</h2>
-          <Images />
+          <div className="flex flex-col items-center justify-center gap-12 px-4 py-16">
+            <h2 className="text-2xl font-bold">Images</h2>
+            <Images />
+          </div>
         </SignedIn>
       </div>
     </main>

@@ -10,7 +10,9 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 - [x] Setup database (Vercel Postgres)
 - [x] Attach database data to UI
 - [x] Add a basic auth (Clerk)
-- [ ] Add image upload (uploadthing.com)
+- [x] Add image upload (uploadthing.com)
+- [ ] taint
+- [ ] Use Next image
 - [ ] Routing/image page (parallel route)
 - [ ] Delete button (w/ Server Actions)
 - [ ] Analytics (posthog)
