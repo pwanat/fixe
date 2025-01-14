@@ -15,8 +15,9 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 - [x] Use Next image
 - [x] Routing/image page (parallel route)
 - [x] Add shadcn/ui
-- [ ] Add toasts
+- [x] Add toasts
 - [ ] Delete button (w/ Server Actions)
 - [ ] Analytics (posthog)
 - [ ] Ratelimiting (upstash)
+- [ ] Add dark mode
 - [ ] Add Sentry
