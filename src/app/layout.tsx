@@ -22,7 +22,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" className={`${GeistSans.variable}`}>
         <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
-        <body className="min-h-screen bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
+        <body className="min-h-screen bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white dark">
           <div className="grid h-screen grid-rows-[auto,1fr]">
             <TopNav />
             <main className="overflow-y-scroll">{children}</main>
