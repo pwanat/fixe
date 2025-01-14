@@ -13,7 +13,8 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 - [x] Add image upload (uploadthing.com)
 - [x] taint
 - [x] Use Next image
-- [ ] Routing/image page (parallel route)
+- [X] Routing/image page (parallel route)
 - [ ] Delete button (w/ Server Actions)
 - [ ] Analytics (posthog)
 - [ ] Ratelimiting (upstash)
+- [ ] Add Sentry

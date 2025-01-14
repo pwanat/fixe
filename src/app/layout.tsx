@@ -14,19 +14,19 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
-
-
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+  modal,
+}: Readonly<{ children: React.ReactNode; modal: React.ReactNode }>) {
   return (
     <ClerkProvider>
       <html lang="en" className={`${GeistSans.variable}`}>
-        <NextSSRPlugin
-        routerConfig={extractRouterConfig(ourFileRouter)} />
+        <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
         <body className="min-h-screen bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
           <TopNav />
           {children}
+          {modal}
+          <div id='modal-root' />
         </body>
       </html>
     </ClerkProvider>
