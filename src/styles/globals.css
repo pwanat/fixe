@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {}
 dialog {
     max-width: none;
     max-height: none;
