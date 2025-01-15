@@ -13,7 +13,9 @@ export default async function ImgPage({
 
   return (
     <div>
-      <FullPageImageView id={Number(id)} />
+      <div className="p-2">
+        <FullPageImageView id={Number(id)} />
+      </div>
       <div className="p-2">
         <form
           action={async () => {
