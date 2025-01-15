@@ -1,6 +1,8 @@
 {
     "cSpell.words": [
         "posthog",
+        "sonner",
+        "topnav",
         "uploadthing"
     ],
     "typescript.tsdk": "node_modules\\typescript\\lib"
