@@ -21,8 +21,8 @@ const Images = async () => {
               src={image.url}
               style={{ objectFit: "contain" }}
               alt={image.name}
-              width={480}
-              height={480}
+              width={320}
+              height={320}
             />
           </Link>
           <div>{image.name}</div>
@@ -44,7 +44,7 @@ export default async function HomePage() {
           <h2 className="text-2xl font-bold">Please sign in above</h2>
         </SignedOut>
         <SignedIn>
-          <div className="flex flex-col items-center justify-center gap-12 px-4 py-16">
+          <div className="flex flex-col items-center justify-center gap-12 px-4 py-4">
             <h2 className="text-2xl font-bold">Images</h2>
             <Images />
           </div>
