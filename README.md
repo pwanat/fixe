@@ -19,5 +19,5 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 - [x] Analytics (posthog)
 - [x] Delete button (w/ Server Actions)
 - [x] Ratelimiting (upstash)
-- [ ] Add dark mode
+- [x] Add dark mode
 - [ ] Add Sentry
