@@ -87,6 +87,12 @@ const SimpleUploadButton = () => {
       toast("Upload complete");
       router.refresh();
     },
+    onUploadError: (error) => {
+      posthog.capture("Upload error", { error });
+      toast.dismiss("upload-begin");
+      toast.error("Upload failed");
+      router.refresh();
+    },
   });
   return (
     <div>
