@@ -3,18 +3,18 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 
-import SimpleUploadButton from "./simple-upload-button";
-import { DarkModeToggle } from "./dark-mode-toggle";
+import SimpleUploadButton from "../simple-upload-button";
+import { DarkModeToggle } from "../dark-mode-toggle";
+import { Navigation } from "./partials/navigation";
 
 export const TopNav = () => {
-
   return (
-    <nav className="flex items-center justify-between gap-4 bg-slate-300 dark:bg-slate-800 px-4 py-4">
+    <nav className="flex justify-between gap-4 bg-slate-300 px-4 py-4 dark:bg-slate-800">
       <div className="flex items-center gap-4">
-        <Link href="/" className="text-xl font-bold">
-          Fixe
-        </Link>
+        <div className="flex items-center gap-4">BIEDAK</div>
+        <Navigation />
       </div>
+
       <div>
         <SignedOut>
           <SignInButton />
