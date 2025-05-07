@@ -10,6 +10,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "~/components/ui/sidebar"
+import { DarkModeToggle } from "../../dark-mode-toggle"
 
 export function NavSecondary({
   items,
@@ -35,6 +36,7 @@ export function NavSecondary({
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}
+                  <DarkModeToggle />
         </SidebarMenu>
       </SidebarGroupContent>
     </SidebarGroup>
