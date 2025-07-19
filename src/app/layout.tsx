@@ -3,7 +3,12 @@ import "~/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { CSPostHogProvider } from "./_analytics/provider";
-import { ClerkProvider } from "@clerk/nextjs";
+import {
+  ClerkProvider,
+  RedirectToSignIn,
+  SignedIn,
+  SignedOut,
+} from "@clerk/nextjs";
 import { TopNav } from "./_components/topnav/topnav";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import { extractRouterConfig } from "uploadthing/server";
@@ -36,20 +41,25 @@ export default function RootLayout({
               enableSystem
               disableTransitionOnChange
             >
-              <SidebarProvider>
-                <AppSidebar variant="inset" />
-                <SidebarInset>
-                  <SiteHeader />
-                  <div className="flex flex-1 flex-col">
-                    <div className="@container/main flex flex-1 flex-col gap-2">
-                      {children}
+              <SignedIn>
+                <SidebarProvider>
+                  <AppSidebar variant="inset" />
+                  <SidebarInset>
+                    <SiteHeader />
+                    <div className="flex flex-1 flex-col">
+                      <div className="@container/main flex flex-1 flex-col gap-2">
+                        {children}
+                      </div>
                     </div>
-                  </div>
-                </SidebarInset>
-              </SidebarProvider>
+                  </SidebarInset>
+                </SidebarProvider>
+              </SignedIn>
               {modal}
               <div id="modal-root" />
               <Toaster />
+              <SignedOut>
+                <RedirectToSignIn />
+              </SignedOut>
             </ThemeProvider>
           </body>
         </html>

@@ -1,17 +1,12 @@
 {
-    "cSpell.words": [
-        "posthog",
-        "sonner",
-        "topnav",
-        "uploadthing"
-    ],
-    "typescript.tsdk": "node_modules\\typescript\\lib",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+  "cSpell.words": ["Biedak", "posthog", "sonner", "topnav", "uploadthing"],
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

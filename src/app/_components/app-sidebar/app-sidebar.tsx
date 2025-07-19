@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import type * as React from "react"
+import type * as React from "react";
 import {
   ArrowUpCircleIcon,
   BarChartIcon,
@@ -17,12 +17,12 @@ import {
   SearchIcon,
   SettingsIcon,
   UsersIcon,
-} from "lucide-react"
+} from "lucide-react";
 
-import { NavDocuments } from "./partials/nav-documents"
-import { NavMain } from "./partials/nav-main"
-import { NavSecondary } from "./partials/nav-secondary"
-import { NavUser } from "./partials/nav-user"
+import { NavDocuments } from "./partials/nav-documents";
+import { NavMain } from "./partials/nav-main";
+import { NavSecondary } from "./partials/nav-secondary";
+import { NavUser } from "./partials/nav-user";
 import {
   Sidebar,
   SidebarContent,
@@ -31,8 +31,8 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "~/components/ui/sidebar"
-import { DarkModeToggle } from "../dark-mode-toggle"
+} from "~/components/ui/sidebar";
+import BiedakLogo from "../biedak-logo";
 
 const data = {
   user: {
@@ -43,7 +43,7 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/",
       icon: LayoutDashboardIcon,
     },
     {
@@ -149,7 +149,7 @@ const data = {
       icon: FileIcon,
     },
   ],
-}
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -157,10 +157,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:p-1.5!">
-              <a href="#">
-                <ArrowUpCircleIcon className="h-5 w-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+            <SidebarMenuButton
+              asChild
+              className="data-[slot=sidebar-menu-button]:p-1.5!"
+            >
+              <a href="/" className="!p-0">
+                <BiedakLogo className="!h-8 !w-max" />
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
@@ -175,5 +177,5 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }
